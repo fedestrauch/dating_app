@@ -10,13 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422153954) do
+ActiveRecord::Schema.define(version: 20170422215754) do
 
   create_table "date_apps", force: :cascade do |t|
     t.string   "name"
     t.string   "sex"
     t.text     "dislikes"
     t.integer  "age"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.index ["email"], name: "index_date_apps_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_date_apps_on_reset_password_token", unique: true
+  end
+
+  create_table "dislikes", force: :cascade do |t|
+    t.integer  "date_app_id"
+    t.integer  "topic_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["date_app_id"], name: "index_dislikes_on_date_app_id"
+    t.index ["topic_id"], name: "index_dislikes_on_topic_id"
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

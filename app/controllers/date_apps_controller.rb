@@ -1,6 +1,6 @@
 class DateAppsController < ApplicationController
   before_action :set_date_app, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_counter, only: [:match]
   # GET /date_apps
   # GET /date_apps.json
   def index
@@ -10,6 +10,19 @@ class DateAppsController < ApplicationController
   # GET /date_apps/1
   # GET /date_apps/1.json
   def show
+  end
+
+  def match
+    @topic1 = Topic.find(session[:counter])
+    @topic2 = Topic.find(session[:counter] + 1)
+    session[:counter] += 2
+  end
+
+  def add_dislike
+    user = DateApp.find(params[:user_id])
+    topic = Topic.find(params[:topic_id])
+    user.topics << topic
+    redirect_to :match
   end
 
   # GET /date_apps/new
@@ -70,5 +83,11 @@ class DateAppsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def date_app_params
       params.require(:date_app).permit(:name, :sex, :dislikes, :age)
+    end
+
+    def set_counter
+      if !session[:counter] || session[:counter] >= Topic.last.id
+        session[:counter] = Topic.first.id
+      end
     end
 end

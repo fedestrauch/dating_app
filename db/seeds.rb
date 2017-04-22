@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Topic.destroy_all
+a = ["Adam Sandler", "Tofu", "Lacross", "Dirty Laundry"]
+
+a.each do |v|
+  Topic.create(title: v)
+  puts "Created #{v}"
+end

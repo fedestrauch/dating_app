@@ -38,7 +38,20 @@
   </head>
 
   <body>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
+    <% if date_app_signed_in? %>
+      <li>
+        <%= link_to('Logout', destroy_date_app_session_path, :method => :delete) %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to('Login', new_date_app_session_path)  %>
+      </li>
+    <% end %>
   </body>
   <!-- Bootstrap core JavaScript
   ================================================== -->
