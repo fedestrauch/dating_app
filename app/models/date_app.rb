@@ -1,0 +1,2 @@
+class DateApp < ApplicationRecord
+end
