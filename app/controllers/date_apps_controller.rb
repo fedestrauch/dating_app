@@ -18,6 +18,11 @@ class DateAppsController < ApplicationController
     session[:counter] += 2
   end
 
+  def profile
+    @date_apps = DateApp.find(1)
+    p @date_apps
+  end
+
   def add_dislike
     user = DateApp.find(params[:user_id])
     topic = Topic.find(params[:topic_id])
