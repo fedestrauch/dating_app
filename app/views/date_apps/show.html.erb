@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @date_app.name %>
-</p>
+<% if @date_app.name %>
+  <p>
+    <strong>Name:</strong>
+    <%= @date_app.name %>
+  </p>
+<% end %>
 
 <p>
   <strong>Sex:</strong>
-  <%= @date_app.sex %>
+  <%= @date_app.sex ? @date_app.sex : "Please complete you profile" %>
 </p>
 
 <p>
@@ -18,6 +20,11 @@
 <p>
   <strong>Age:</strong>
   <%= @date_app.age %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @date_app.email %>
 </p>
 
 <%= link_to 'Edit', edit_date_app_path(@date_app) %> |
