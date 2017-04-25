@@ -21,6 +21,11 @@ class DateAppsController < ApplicationController
   def results
     @match = DateApp.find(params[:user_id])
   end
+  
+  def profile
+    @date_apps = DateApp.find(1)
+    p @date_apps
+  end
 
   def add_dislike
     user = DateApp.find(params[:user_id])
