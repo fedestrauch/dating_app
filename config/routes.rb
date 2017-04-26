@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/match', to: 'date_apps#match'
   get "/results" => 'date_apps#results'
   get '/profile', to: 'date_apps#profile'
+  get '/profile', to: 'date_apps#profile'
   get '/add_dislike' =>'date_apps#match'
   get '/profile', to: 'date_apps#profile'
 
