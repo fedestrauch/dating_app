@@ -39,9 +39,6 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
     <%= yield %>
     <% if date_app_signed_in? %>
       <li>
@@ -51,6 +48,9 @@
       <li>
         <%= link_to('Login', new_date_app_session_path)  %>
       </li>
+    <% end %>
+
+    <% if Rails.env.development? %>
     <% end %>
   </body>
   <!-- Bootstrap core JavaScript

@@ -15,7 +15,7 @@ a = [
   {title: "Monday", img_url: "https://i.imgflip.com/18labz.jpg"},
   {title: "DMV", img_url: "https://img.memesuper.com/5e19a4a81247b69f8582bd739665bd97_waiting-in-line-at-the-dmv-waiting-at-the-dmv-meme_560-335.jpeg"},
   {title: "Baby", img_url: "http://s2.quickmeme.com/img/ef/ef77030b7381bbc0ebccfffa1151e13f29e136514931e695dae6da9c08b7473b.jpg"},
-  {title: "Flight_delay", img_url: "http://www.jamaicaobserver.com/assets/12711527/flight-delays.jpg"},
+  {title: "Flight_delay", img_url: "http://apr_blog.s3.amazonaws.com/blog/wp-content/uploads/2013/07/Delayed.jpg"},
   {title: "Rush Hour", img_url: "https://media.licdn.com/mpr/mpr/shrinknp_800_800/p/8/005/09a/04a/1dcc9de.jpg"},
   {title: "Phone battery", img_url: "https://s-media-cache-ak0.pinimg.com/originals/f8/ff/97/f8ff97a199e136a5a1ba9a9a96b8654e.png"},
   {title: "trash", img_url: "https://betanews.com/wp-content/uploads/2015/05/peeyouuutrasgh-600x528.jpg"},
@@ -36,6 +36,10 @@ a = [
 
 
 
+=======
+  {title: "Flight_delay", img_url: "http://apr_blog.s3.amazonaws.com/blog/wp-content/uploads/2013/07/Delayed.jpg"},
+  {title: "Rush Hour", img_url: "https://media.licdn.com/mpr/mpr/shrinknp_800_800/p/8/005/09a/04a/1dcc9de.jpg"}
+>>>>>>> e7b5cd18d180385c38c2fdff8050165024b3e5fb
 ]
 
 a.each do |v|

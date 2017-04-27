@@ -18,15 +18,37 @@ class DateAppsController < ApplicationController
     session[:counter] += 2
   end
 
+  def results
+    @match = DateApp.find(params[:user_id])
+  end
+
+  def profile
+    @date_apps = DateApp.find(1)
+    p @date_apps
+  end
+
   def add_dislike
     user = DateApp.find(params[:user_id])
     topic = Topic.find(params[:topic_id])
     user.topics << topic
-    redirect_to :match
+    user.save
+    #check to see if there is a match
+    has_match = user.check_for_matches
+    #if there is a match...
+    if has_match.present?
+      #redirct to the results page, with that users
+      if has_match.respond_to? :map
+        redirect_to results_path(user_id: has_match.sample.id)
+      else
+        redirect_to results_path(user_id: has_match.id)
+      end
+    else
+      redirect_to :match
+    end
   end
 
 
-  # GET /date_apps/new
+
   def new
     @date_app = DateApp.new
   end

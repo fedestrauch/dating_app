@@ -15,15 +15,6 @@ body {
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
-}
-
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper > .container {
   padding-right: 0;
@@ -77,6 +68,15 @@ img.third-slide {
 }
 img#baby {
   width: 100px;
+}
+
+img.results1 {
+  width: 200px;
+}
+
+img.results2 {
+  width: 200px;
+  margin-left: 4em;
 }
 
 

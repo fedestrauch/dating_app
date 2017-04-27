@@ -18,6 +18,7 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
+                <li><a href="#about">Categories</a></li>
                 <li><a href="/match">Matches</a></li>
                 <li><img id="baby" src="http://www.extension.zone/wp-content/uploads/2015/09/dislike-logo.png"></li>
 
@@ -43,13 +44,10 @@
     <br>
     <br>
     <br>
-    <h3> Start Disliking! <img id="finger1" src="http://3.bp.blogspot.com/-u4L1MqeRamU/U5hZMEDaItI/AAAAAAAAIwk/o7b_41n_Tg4/s1600/middle-finger-emoticon.png"> </h3>
 
+    <h1>You Matched with <%= @match.name%> <%=@match.email %> !</h1>
+    <br>
 
-    <div id ="buttons">
-  <%=link_to image_tag(@topic1.img_url), add_dislike_path(topic_id: @topic1.id, user_id: current_date_app.id), class: "topic-choice", method: :post %>
-</div>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Belle_disney.png/220px-Belle_disney.png" class="results1">
 
-<div id="button2">
-  <%=link_to image_tag(@topic2.img_url), add_dislike_path(topic_id: @topic2.id, user_id: current_date_app.id), class: "topic-choice2", method: :post %>
-</div>
+    <img src="https://vignette3.wikia.nocookie.net/deathbattlefanon/images/d/de/Gaston.png/revision/latest?cb=20150208234351" class ="results2">
