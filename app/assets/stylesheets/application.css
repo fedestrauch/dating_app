@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+#background-color .panel {
+  background-color: rgba(209, 230, 250, 0.71) !important;
+}

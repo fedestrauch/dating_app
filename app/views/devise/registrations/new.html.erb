@@ -1,44 +1,67 @@
 
-<h2>Sign up now!</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<body id="background-color" background='https://s-media-cache-ak0.pinimg.com/originals/1f/9e/2c/1f9e2ca22194d794a5874cf7b34e6356.jpg'>
 
-  <div class="field">
+<div class="col-md-6">
+  <div class="panel panel-default job">
+    <div class="panel-body">
+      <h1>Disliked..</h1>
 
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, required:true  %>
+      <h2>Excited for something new?!?</h2>
+      <h4> Come join us at Disliked..! Meet people that dislike the same things you do!</h4>
+
+      <h2> Login:</h2>
+      <br><br>
+      <h2>Sign up now!</h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field">
+
+          <%= f.label :name %><br />
+          <%= f.text_field :name, autofocus: true, required:true  %>
+        </div>
+
+        <div class="field">
+          <%= f.label :age %><br />
+          <%= f.text_field :age, autofocus: true, required:true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :sex %><br />
+          <%= f.text_field :sex, autofocus: true, required:true %>
+        </div>
+
+          <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, required:true  %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up" %>
+        </div>
+      <% end %>
+
+
+    </div>
+
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.text_field :age, autofocus: true, required:true %>
-  </div>
 
-  <div class="field">
-    <%= f.label :sex %><br />
-    <%= f.text_field :sex, autofocus: true, required:true %>
-  </div>
 
-    <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, required:true  %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+</body>
