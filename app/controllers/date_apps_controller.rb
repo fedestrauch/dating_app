@@ -49,7 +49,6 @@ class DateAppsController < ApplicationController
 
 
 
-  # GET /date_apps/new
   def new
     @date_app = DateApp.new
   end
