@@ -25,6 +25,7 @@ class DateAppsController < ApplicationController
     redirect_to :match
   end
 
+
   # GET /date_apps/new
   def new
     @date_app = DateApp.new
